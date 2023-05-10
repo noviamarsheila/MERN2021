@@ -12,6 +12,6 @@
 	"plugins": ["react"],
 	"rules": {
 		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-		"jsx-a11y/anchor-is-valid": "off"
+		"jsx-a11y/anchor-is-valid": "off "
 	}
 }

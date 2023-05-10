@@ -9,6 +9,7 @@ interface MenuProps {
 
 const Menu = (props: Partial<MenuProps>) => {
 	const { title, active, href = "/" } = props;
+
 	const classTitle = cx({
 		"nav-link": true,
 		active,
