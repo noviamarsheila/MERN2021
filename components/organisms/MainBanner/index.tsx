@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Illustration from "./Illustration";
 
 const MainBanner = () => {
