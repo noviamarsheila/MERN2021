@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const TopUpForm = () => {
 	return (
 		<form action="./checkout.html" method="POST">
@@ -136,9 +138,9 @@ const TopUpForm = () => {
 				<input type="text" className="form-control rounded-pill text-lg" id="bankAccount" name="bankAccount" aria-describedby="bankAccount" placeholder="Enter your Bank Account Name" />
 			</div>
 			<div className="d-sm-block d-flex flex-column w-100">
-				<a href="./checkout.html" type="submit" className="btn btn-submit rounded-pill fw-medium text-white border-0 text-lg">
+				<Link href="./checkout" type="submit" className="btn btn-submit rounded-pill fw-medium text-white border-0 text-lg">
 					Continue
-				</a>
+				</Link>
 			</div>
 		</form>
 	);
