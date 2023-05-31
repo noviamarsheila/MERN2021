@@ -2,19 +2,24 @@ import Footer from "./Footer";
 import MenuItem from "./MenuItem";
 import Profile from "./Profile";
 
-const SideBar = () => {
+interface SideBarProps {
+	activeMenu: "overview" | "transactions" | "settings";
+}
+
+const SideBar = (props: SideBarProps) => {
+	const { activeMenu } = props;
 	return (
 		<section className="sidebar">
 			<div className="content pt-50 pb-30 ps-30">
 				<Profile />
 				<div className="menus">
-					<MenuItem icon="icon-menu-overview.svg" title="Overview" active />
-					<MenuItem icon="icon-menu-transaction.svg" title="Transactions" />
-					<MenuItem icon="icon-menu-messages.svg" title="Messages" />
-					<MenuItem icon="icon-menu-card.svg" title="Card" />
-					<MenuItem icon="icon-menu-rewards.svg" title="Rewards" />
-					<MenuItem icon="icon-menu-settings.svg" title="Settings" />
-					<MenuItem icon="icon-menu-logout.svg" title="Log Out" />
+					<MenuItem icon="icon-menu-overview" title="Overview" active={activeMenu === "overview"} href="/member" />
+					<MenuItem icon="icon-menu-transaction" title="Transactions" active={activeMenu === "transactions"} href="/member/transactions" />
+					<MenuItem icon="icon-menu-messages" title="Messages" href="/member" />
+					<MenuItem icon="icon-menu-card" title="Card" href="/member" />
+					<MenuItem icon="icon-menu-rewards" title="Rewards" href="/member" />
+					<MenuItem icon="icon-menu-settings" title="Settings" active={activeMenu === "settings"} href="/member/edit-profile" />
+					<MenuItem icon="icon-menu-logout" title="Log Out" href="/sign-in" />
 				</div>
 				<Footer />
 			</div>
