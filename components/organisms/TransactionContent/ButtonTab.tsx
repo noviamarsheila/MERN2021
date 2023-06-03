@@ -5,7 +5,7 @@ interface ButtonTabProps {
 	active?: boolean;
 }
 
-const ButtonTab = (props: ButtonTabProps) => {
+const ButtonTab = (props: Partial<ButtonTabProps>) => {
 	const { title, active } = props;
 
 	const btnClass = cx({
