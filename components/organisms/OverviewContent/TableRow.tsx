@@ -6,18 +6,18 @@ interface TableRowProps {
 	categori: string;
 	item: number;
 	price: number;
-	statuss: "Pending" | "Success" | "Failed";
+	status: "Pending" | "Success" | "Failed";
 	image: string;
 }
 
 const TableRow = (props: TableRowProps) => {
-	const { title, categori, item, price, statuss, image } = props;
+	const { title, categori, item, price, status, image } = props;
 
 	const statusClass = cx({
 		"float-start icon-status": true,
-		pending: statuss == "Pending",
-		success: statuss == "Success",
-		failed: statuss == "Failed",
+		pending: status == "Pending",
+		success: status == "Success",
+		failed: status == "Failed",
 	});
 
 	return (
@@ -38,7 +38,7 @@ const TableRow = (props: TableRowProps) => {
 			<td>
 				<div>
 					<span className={statusClass}></span>
-					<p className="fw-medium text-start color-palette-1 m-0 position-relative">{statuss}</p>
+					<p className="fw-medium text-start color-palette-1 m-0 position-relative">{status}</p>
 				</div>
 			</td>
 		</tr>

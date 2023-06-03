@@ -38,10 +38,10 @@ const OverviewContent = () => {
 								</tr>
 							</thead>
 							<tbody>
-								<TableRow image="overview-1" title="Mobile Legends: The New Battle 2021" categori="Dekstop" item={200} price={290000} statuss="Pending" />
-								<TableRow image="overview-2" title="Call of Duty:Modern" categori="Dekstop" item={550} price={740000} statuss="Success" />
-								<TableRow image="overview-4" title="Clash of Clans" categori="Mobile" item={100} price={120000} statuss="Failed" />
-								<TableRow image="overview-4" title="The Royal Game" categori="Mobile" item={225} price={200000} statuss="Pending" />
+								<TableRow image="overview-1" title="Mobile Legends: The New Battle 2021" categori="Dekstop" item={200} price={290000} status="Pending" />
+								<TableRow image="overview-2" title="Call of Duty:Modern" categori="Dekstop" item={550} price={740000} status="Success" />
+								<TableRow image="overview-3" title="Clash of Clans" categori="Mobile" item={100} price={120000} status="Failed" />
+								<TableRow image="overview-4" title="The Royal Game" categori="Mobile" item={225} price={200000} status="Pending" />
 							</tbody>
 						</table>
 					</div>
